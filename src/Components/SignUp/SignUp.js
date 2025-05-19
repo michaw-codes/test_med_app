@@ -1,39 +1,39 @@
-import './Sign_Up.css';
+import './SignUp.css';
 
-function Sign_Up() {
+function SignUp() {
     return (
-      <div className="Sign_Up">
-            <div class="container" style="margin-top: 5%;">
-                <div class="signup-text">
+      <div className="SignUp">
+            <div className="container" style={{marginTop: '5%'}}>
+                <div className="signup-text">
                     <h1>Sign Up</h1>
                 </div>
-                <div class="signup-text">
+                <div className="signup-text">
                     Already a member?
                 </div>
-                <div class="signup-text">
+                <div className="signup-text">
                     <a href="../Login/Login.html">Login</a>
                 </div>
-                <div class="signup-form">
+                <div className="signup-form">
                     <form>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="name">Name</label>
                             <input
                                 type="text"
                                 name="name"
                                 id="name"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="Enter your name"
                                 aria-describedby="helpId"
                                 required
                             />
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="phone">Phone</label>
                             <input
                                 type="tel"
                                 name="phone"
                                 id="phone"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="Enter your phone number"
                                 aria-describedby="helpId"
                                 pattern="\d{10}"
@@ -42,34 +42,35 @@ function Sign_Up() {
                             />
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="email">Email</label>
                             <input
                                 type="email"
                                 name="email"
                                 id="email"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="Enter your email"
                                 aria-describedby="helpId"
                                 required
                             />
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="password">Password</label>
                             <input
+                                type="password"
                                 name="password"
                                 id="password"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="Enter your password"
                                 aria-describedby="helpId"
                                 required
                             />
                         </div>
 
-                        <div class="btn-group">
-                            <button type="submit" class="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button> 
-                            <button type="reset" class="btn btn-danger mb-2 waves-effect waves-light">Reset</button>
+                        <div className="btn-group">
+                            <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button> 
+                            <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">Reset</button>
                         </div>
                     </form>
                 </div>
@@ -78,4 +79,4 @@ function Sign_Up() {
     );
   }
   
-  export default Sign_Up;
+  export default SignUp;

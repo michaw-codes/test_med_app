@@ -26,16 +26,16 @@ function Navbar() {
 
             <ul className="nav__links active">
             <li className="link">
-                <a href="../Landing_Page/LandingPage.html">Home</a>
+                <a href="/">Home</a>
             </li>
             <li className="link">
                 <a href="/">Appointments</a>
             </li>
             <li className="link">
-                <a className="btn1" href="../Sign_Up/Sign_Up.html">Sign Up</a>
+                <a className="btn1" href="/signup">Sign Up</a>
             </li>
             <li className="link">
-                <a className="btn1"href="../Login/Login.html">Login</a>
+                <a className="btn1"href="/login">Login</a>
             </li>
             </ul>
         </nav>

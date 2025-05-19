@@ -1,0 +1,100 @@
+/* Styles for the main container */
+.container {
+    max-width: 300px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 25px 0; /* Padding inside the container */
+    margin-top: 10%; /* Top margin of 10% */
+    background-color: #E5E7EB;
+}
+
+/* Styles for the main login text */
+.login-text {
+    color: #111827;
+    text-align: center; /* Center-align text */
+    font-size: 14px;
+    line-height: 1.428;
+}
+
+.login-text a {
+    font-weight: 700;
+    color: #3685fb;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+.login-text h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.333;
+    margin: 0;
+}
+
+.login-text .forgot-password {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 700;
+}
+
+.login-text .forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the login form section */
+.login-form {
+    width: 250px;
+    margin: 15px auto 0;
+}
+
+/* Styles for form groups */
+.form-group {
+    margin-bottom: 20px; /* Bottom margin for spacing between form groups */
+}
+
+/* Styles for form group labels */
+.form-group label {
+    display: block; /* Make labels display as block elements */
+    margin-bottom: 5px; /* Bottom margin for spacing below labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+/* Styles for form controls */
+.form-control {
+    width: 100%; /* Set width of form controls */
+    padding: 8px; /* Add padding inside form controls */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #6B7280; /* Add border with color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-sizing: border-box;
+}
+
+/* Styles for button groups */
+.btn-group {
+    margin-top: 40px; /* Add a small top margin to button group */
+    margin-bottom: 40px;
+}
+
+/* Styles for buttons */
+.btn {
+    padding: 10px 20px; /* Padding inside buttons */
+    font-size: 16px; /* Font size of buttons */
+    border: none; /* No border for buttons */
+    border-radius: 4px; /* Border radius for rounded corners on buttons */
+    cursor: pointer; /* Cursor style on hover for buttons */
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Styles for primary buttons */
+.btn-primary {
+    background-color: #3685fb; /* Background color for primary buttons */
+    color: #fff; /* Text color for primary buttons */
+}
+
+/* Styles for danger (red) buttons */
+.btn-danger {
+    background-color: #EF4444; /* Background color for danger buttons */
+    color: #fff; /* Text color for danger buttons */
+}

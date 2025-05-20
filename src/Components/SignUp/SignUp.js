@@ -58,13 +58,13 @@ const SignUp = () => {
     // JSX to render the Sign Up form
     return (
         <div className="container" style={{marginTop:'5%'}}>
-            <div class="signup-text">
+            <div className="signup-text">
                 <h1>Sign Up</h1>
             </div>
-            <div class="signup-text">
+            <div className="signup-text">
                 Already a member?
             </div>
-            <div class="signup-text">
+            <div className="signup-text">
                 <a href="/login">Login</a>
             </div>
             <div className="signup-form">
@@ -86,7 +86,7 @@ const SignUp = () => {
                         <label htmlFor="password">Password</label>
                         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
                     </div>
-                    <div class="btn-group">
+                    <div className="btn-group">
                         <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button>
                         <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">Reset</button>
                     </div>

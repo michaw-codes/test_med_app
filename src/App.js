@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import LandingPage from './Components/LandingPage/LandingPage';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
+import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/" element={<LandingPage/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/signup" element={<SignUp/>}/>
+                <Route path="/instant-consultation" element={<InstantConsultation />} />
             </Routes>
         </BrowserRouter>
     </>

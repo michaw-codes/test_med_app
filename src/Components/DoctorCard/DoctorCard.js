@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'reactjs-popup/dist/index.css';
 import './DoctorCard.css';
+import AppointmentForm from '../AppointmentForm/AppointmentForm'
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -40,10 +41,11 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
           <div className="doctor-card-detail-consultationfees">Ratings: {ratings}</div>
         </div>
         <div>
-            <button className='book-appointment-btn'>                    
+            {/* <button className='book-appointment-btn'>                    
                 <div>Book Appointment</div>
                 <div>No Booking Fee</div>
-            </button>
+            </button> */}
+            <AppointmentForm doctorName={name} doctorSpeciality={speciality} onSubmit={handleFormSubmit} />
         </div>
       </div>
     </div>

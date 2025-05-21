@@ -13,9 +13,8 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
     setShowModal(true);
   };
 
-  const handleCancel = (appointmentId) => {
-    const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
-    setAppointments(updatedAppointments);
+  const handleCancel = () => {
+    setAppointments([]);
   };
 
   const handleFormSubmit = (appointmentData) => {
@@ -45,7 +44,11 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
                 <div>Book Appointment</div>
                 <div>No Booking Fee</div>
             </button> */}
-            <AppointmentForm doctorName={name} doctorSpeciality={speciality} onSubmit={handleFormSubmit} />
+            {appointments.length > 0 ? (
+                <button className="book-appointment-btn cancel-appointment" onClick={() => handleCancel()}>Cancel Appointment</button>
+            ) : (
+                <AppointmentForm doctorName={name} doctorSpeciality={speciality} onSubmit={handleFormSubmit} />
+            )}
         </div>
       </div>
     </div>

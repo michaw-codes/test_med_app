@@ -1,6 +1,4 @@
-// import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Navbar from './Components/Navbar/Navbar';
 import Notification from './Components/Notification/Notification';
 import LandingPage from './Components/LandingPage/LandingPage';
 import Login from './Components/Login/Login';
@@ -13,8 +11,6 @@ function App() {
     <>
         {/* Set up BrowserRouter for routing */}
         <BrowserRouter>
-            {/* Display the Navbar component */}
-            {/* <Navbar/> */}
             {/* Set up the Routes for different pages */}
             <Notification>
                 <Routes>

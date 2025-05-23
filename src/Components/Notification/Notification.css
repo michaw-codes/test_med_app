@@ -1,0 +1,12 @@
+.appointment-card {
+    position: fixed;
+    top: 7.5rem;
+    left: 3.125rem;
+    padding: 3.125rem;
+    background: #0EA5E9;
+    color: white;
+}
+
+.appointment-card__title {
+    margin-bottom: 1.5rem;
+}

@@ -1,6 +1,7 @@
 // import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from './Components/Navbar/Navbar';
+// import Navbar from './Components/Navbar/Navbar';
+import Notification from './Components/Notification/Notification';
 import LandingPage from './Components/LandingPage/LandingPage';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
@@ -13,16 +14,18 @@ function App() {
         {/* Set up BrowserRouter for routing */}
         <BrowserRouter>
             {/* Display the Navbar component */}
-            <Navbar/>
+            {/* <Navbar/> */}
             {/* Set up the Routes for different pages */}
-            <Routes>
-                {/* Define individual Route components for different pages */}
-                <Route path="/" element={<LandingPage/>}/>
-                <Route path="/login" element={<Login/>}/>
-                <Route path="/signup" element={<SignUp/>}/>
-                <Route path="/instant-consultation" element={<InstantConsultation />} />
-                <Route path="/booking-consultation" element={<BookingConsultation />} />
-            </Routes>
+            <Notification>
+                <Routes>
+                    {/* Define individual Route components for different pages */}
+                    <Route path="/" element={<LandingPage/>}/>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/signup" element={<SignUp/>}/>
+                    <Route path="/instant-consultation" element={<InstantConsultation />} />
+                    <Route path="/booking-consultation" element={<BookingConsultation />} />
+                </Routes>
+            </Notification>
         </BrowserRouter>
     </>
   );

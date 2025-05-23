@@ -10,9 +10,13 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     };
     const handleFormSubmit = (e) => {
       e.preventDefault();
-      onSubmit({ name, phoneNumber });
+      onSubmit({ name, phoneNumber, dateOfAppointment, selectedSlot });
       setName('');
       setPhoneNumber('');
+    //   const doctor = {name: doctorName, speciality: doctorSpeciality};
+    //   localStorage.setItem('doctorData', JSON.parse(doctor));
+    //   const appointment = {name: name, phone: phoneNumber, date: dateOfAppointment, slot: selectedSlot};
+    //   localStorage.setItem(name, JSON.stringify(appointment));
     };
     const timeSlots = ["8-9", "9-10", "10-11", "11-12"];
   
@@ -52,7 +56,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
           <label htmlFor="timeSlot">Book Time Slot:</label>
           <select
             id="timeSlot"
-            value={selectedSlot}
+            value={selectedSlot || ""}
             onChange={(e) => setSelectedSlot(e.target.value)}
             required
           >

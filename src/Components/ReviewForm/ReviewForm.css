@@ -1,0 +1,61 @@
+.reviews {
+    margin-top: 150px;
+}
+
+.reviews__form {
+    max-width: 600px;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #E5E7EB;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.form__heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.333;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styles for form groups in the signup form */
+.form-group {
+    margin-bottom: 20px; /* Add bottom margin to form groups */
+}
+
+.form-group label {
+    display: block; /* Display labels as blocks */
+    margin-bottom: 5px; /* Add bottom margin to labels */
+    font-weight: bold; /* Set font weight to bold for labels */
+}
+
+/* Styles for form controls in the signup form */
+.form-control {
+    width: 100%; /* Set width of form controls */
+    padding: 8px; /* Add padding inside form controls */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #6B7280; /* Add border with color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-sizing: border-box;
+}
+
+/* Styles for buttons in the signup form */
+.btn {
+    padding: 10px 20px; /* Set padding for buttons */
+    font-size: 16px; /* Set font size for buttons */
+    border: none; /* Remove button borders */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Styles for primary button in the signup form */
+.btn-primary {
+    background-color: #3685fb; /* Set background color for primary button */
+    color: #fff; /* Set text color for primary button */
+}

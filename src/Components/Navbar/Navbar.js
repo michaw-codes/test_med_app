@@ -78,6 +78,9 @@ const Navbar = () => {
                 <li className="link">
                     <a href="booking-consultation">Booking Consultation</a>
                 </li>
+                <li className="link">
+                    <a href="reviews">Reviews</a>
+                </li>
                 {isLoggedIn?(
                     <>
                         <li className="link">

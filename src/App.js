@@ -5,6 +5,7 @@ import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import BookingConsultation from './Components/BookingConsultation';
+import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/signup" element={<SignUp/>}/>
                     <Route path="/instant-consultation" element={<InstantConsultation />} />
                     <Route path="/booking-consultation" element={<BookingConsultation />} />
+                    <Route path="/reviews" element={<ReviewForm />} />
                 </Routes>
             </Notification>
         </BrowserRouter>

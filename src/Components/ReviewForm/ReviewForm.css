@@ -1,5 +1,30 @@
 .reviews {
-    margin-top: 150px;
+    max-width: 900px;
+    margin: 150px auto 0;
+}
+
+.reviews__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reviews__table thead {
+    background-color: #E5E7EB;
+}
+
+.reviews__table tr {
+    border-bottom: 1px solid #6B7280;
+}
+
+.reviews__table td {
+    text-align: center;
+}
+
+.reviews__table button {
+    width: auto;
+    min-width: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .reviews__form {
@@ -58,4 +83,9 @@
 .btn-primary {
     background-color: #3685fb; /* Set background color for primary button */
     color: #fff; /* Set text color for primary button */
+}
+
+.btn:disabled {
+    pointer-events: none;
+    opacity: 0.65;
 }

@@ -38,7 +38,9 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
         setAppointment(newAppointment);
         // setShowModal(false);
         const doctor = {name: name, speciality: speciality};
-        localStorage.setItem('doctorData', JSON.stringify(doctor));
+        const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
+        const newDoctorData = [...storedDoctorData, doctor];
+        localStorage.setItem('doctorData', JSON.stringify(newDoctorData));
         localStorage.setItem(name, JSON.stringify(newAppointment));
         window.location.reload();
     };

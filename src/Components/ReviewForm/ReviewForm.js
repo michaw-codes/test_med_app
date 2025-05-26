@@ -7,9 +7,7 @@ const ReviewForm = ({doctors}) => {
     // State variables using useState hook
     const [showForm, setShowForm] = useState(false);
     const [activeReviewIndex, setActiveReviewIndex] = useState(null);
-    const [submittedMessage, setSubmittedMessage] = useState('');
     const [reviews, setReviews] = useState({});
-    const [reviewGiven, setReviewGiven] = useState(false);
     const [showWarning, setShowWarning] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -18,11 +16,12 @@ const ReviewForm = ({doctors}) => {
     });
 
     // Function to handle button click event
-    const handleButtonClick = (index) => {
+    const handleGiveReviewButtonClick = (index) => {
         setActiveReviewIndex(index);
         setShowForm(true);
     };
-    // Function to handle button click event
+
+    // Function to handle Cancle form submission
     const handleCancel = () => {
         setFormData({
             name: '',
@@ -59,9 +58,6 @@ const ReviewForm = ({doctors}) => {
         });
         setActiveReviewIndex(null);
         setShowForm(false);
-    };  });
-        setActiveReviewIndex(null);
-        setShowForm(false);
     };
 
     return (
@@ -85,22 +81,24 @@ const ReviewForm = ({doctors}) => {
                             <tr key={index}>
                                 <td>{index}</td>
                                 <td>{doctor.name}</td>
-                                <td>reviews[index]ciality}</td>
+                                <td>{doctor.speciality}</td>
                                 <td>
                                     {// Display button to open the form
-                                    reviewGiven ? (
+                                    reviews[index] ? (
                                         <button className='btn btn-primary' disabled>Review Given</button>
                                     ) : (
                                         showForm ? (
                                             <button className='btn btn-primary' disabled>Give Review</button>
                                         ) : (
-                                            <button className='btn btn-primary' onClick={() => handleButtonClick(index)}>Give Review</button>
+                                            <button className='btn btn-primary' onClick={() => handleGiveReviewButtonClick(index)}>Give Review</button>
                                         )
                                     )}
-                                <reviews[index].m                                <td>
+                                </td>
+                                <td>
                                 {/* Display the submitted message if available */}
-                                {submittedMereviews[index].message                                    <div>
-                                        <p>{submittedMessage}</p>
+                                {reviews[index]?.message && (
+                                    <div>
+                                        <p>{reviews[index]?.message}</p>
                                     </div>
                                 )}
                                 </td>

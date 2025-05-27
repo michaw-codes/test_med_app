@@ -110,15 +110,27 @@
     height: 40px;
     border: 1px solid rgb(59, 58, 58);
     z-index: -99;
-
+    position: relative;
 }
+.speciality-find-icon {
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+.findiconimg img, .speciality-find-icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .search-doctor-input-results {
     position: absolute;
     top: 55%;
     left: 0;
     width: 100%;
     z-index: 5;
-    height: 420px;
+    height: auto;
     margin-top: 2px;
     border: 1px solid #555;
 }

@@ -17,16 +17,16 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
         if (appointmentData) {
             setAppointment(appointmentData);
         }
-    })
+    }, [])
 
     const handleCancel = () => {
         setAppointment({});
         console.log(name);
-        let appointmentData = JSON.parse(localStorage.getItem(name))
+        const appointmentData = JSON.parse(localStorage.getItem(name))
         console.log(appointmentData);
         localStorage.removeItem(name);
         localStorage.removeItem('doctorData');
-        window.location.reload();
+        // window.location.reload();
     };
 
     const handleFormSubmit = (appointmentData) => {
@@ -42,7 +42,7 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
         const newDoctorData = [...storedDoctorData, doctor];
         localStorage.setItem('doctorData', JSON.stringify(newDoctorData));
         localStorage.setItem(name, JSON.stringify(newAppointment));
-        window.location.reload();
+        // window.location.reload();
     };
 
     return (

@@ -1,23 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './FindDoctorSearch.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 
 
-const initSpeciality = [
+const initSpecialities = [
     'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
 ]
 
 const FindDoctorSearch = () => {
     const [doctorResultHidden, setDoctorResultHidden] = useState(true);
     const [searchDoctor, setSearchDoctor] = useState('');
-    const [specialities, setSpecialities] = useState(initSpeciality);
+    const [specialities, setSpecialities] = useState(initSpecialities);
     const navigate = useNavigate();
     const handleDoctorSelect = (speciality) => {
         setSearchDoctor(speciality);
         setDoctorResultHidden(true);
         navigate(`/booking-consultation?speciality=${speciality}`);
-        window.location.reload();
     }
+    const handleSearch = () => {
+        console.log('searchDoctor', searchDoctor);
+        const filteredSpecialities = initSpecialities.filter(
+            speciality => speciality.toLowerCase().includes(searchDoctor.toLowerCase())
+        );
+        setSpecialities(filteredSpecialities);
+    }
+
+    useEffect(() => {
+        handleSearch();
+    }, [searchDoctor])
+
     return (
         <div className='finddoctor'>
             <center>
@@ -33,7 +44,7 @@ const FindDoctorSearch = () => {
                         <div className="search-doctor-input-results" hidden={doctorResultHidden}>
                             {
                                 specialities.map(speciality => <div className="search-doctor-result-item" key={speciality} onMouseDown={() => handleDoctorSelect(speciality)}>
-                                    <span><img src={process.env.PUBLIC_URL + '/images/search.svg'} alt="" style={{height:"10px", width:"10px"}} width="12" /></span>
+                                    <span className="speciality-find-icon"><img src={process.env.PUBLIC_URL + '/images/search.svg'} alt="" style={{height:"10px", width:"10px"}} width="12" /></span>
                                     <span>{speciality}</span>
                                     <span>SPECIALITY</span>
                                 </div>)

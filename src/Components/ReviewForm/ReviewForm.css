@@ -90,6 +90,7 @@
 }
 
 .btn:disabled {
+    background-color: #6B7280;
     pointer-events: none;
     opacity: 0.65;
 }

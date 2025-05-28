@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import 'reactjs-popup/dist/index.css';
+// import 'reactjs-popup/dist/index.css';
 import './DoctorCard.css';
 import AppointmentForm from '../AppointmentForm/AppointmentForm'
 import { v4 as uuidv4 } from 'uuid';
 
 
 const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
-//   const [showModal, setShowModal] = useState(false);
   const [appointment, setAppointment] = useState({});
 
-//   const handleBooking = () => {
-//     setShowModal(true);
-//   };
     useEffect(() => {
-        const appointmentData = JSON.parse(localStorage.getItem(name));
+        const appointmentData = JSON.parse(sessionStorage.getItem(name));
         if (appointmentData) {
             setAppointment(appointmentData);
         }
@@ -21,12 +17,7 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
 
     const handleCancel = () => {
         setAppointment({});
-        console.log(name);
-        const appointmentData = JSON.parse(localStorage.getItem(name))
-        console.log(appointmentData);
-        localStorage.removeItem(name);
-        localStorage.removeItem('doctorData');
-        // window.location.reload();
+        sessionStorage.removeItem(name);
     };
 
     const handleFormSubmit = (appointmentData) => {
@@ -34,15 +25,8 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
         id: uuidv4(),
         ...appointmentData,
         };
-        // const updatedAppointments = [...appointments, newAppointment];
         setAppointment(newAppointment);
-        // setShowModal(false);
-        const doctor = {name: name, speciality: speciality};
-        const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
-        const newDoctorData = [...storedDoctorData, doctor];
-        localStorage.setItem('doctorData', JSON.stringify(newDoctorData));
-        localStorage.setItem(name, JSON.stringify(newAppointment));
-        // window.location.reload();
+        sessionStorage.setItem(name, JSON.stringify(newAppointment));
     };
 
     return (
@@ -58,10 +42,6 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
             <div className="doctor-card-detail-consultationfees">Ratings: {ratings}</div>
             </div>
             <div>
-                {/* <button className='book-appointment-btn'>                    
-                    <div>Book Appointment</div>
-                    <div>No Booking Fee</div>
-                </button> */}
                 {appointment.id ? (
                     <button className="book-appointment-btn cancel-appointment" onClick={() => handleCancel()}>Cancel Appointment</button>
                 ) : (

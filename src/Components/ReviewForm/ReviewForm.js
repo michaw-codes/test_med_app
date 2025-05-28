@@ -42,13 +42,14 @@ const ReviewForm = ({doctors}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // if (!(formData.name && formData.review && formData.rating > 0)) {
-        if (!(formData.name && formData.review)) {
+        if (!(formData.name && formData.review && formData.rating > 0)) {
             setShowWarning(true);
             return;
         }
         setReviews({ ...reviews,
             [activeReviewIndex]: {
                 'message': formData.review,
+                'rating': formData.rating
             }
         });
         setFormData({
@@ -74,6 +75,7 @@ const ReviewForm = ({doctors}) => {
                             <th>Doctor Speciality</th>
                             <th>Provide Review</th>
                             <th>Review Given</th>
+                            <th>Rating</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -102,6 +104,14 @@ const ReviewForm = ({doctors}) => {
                                     </div>
                                 )}
                                 </td>
+                                <td>
+                                {/* Display the submitted message if available */}
+                                {reviews[index]?.rating && (
+                                    <div>
+                                        <p>{reviews[index]?.rating}</p>
+                                    </div>
+                                )}
+                                </td>
                             </tr>
                         ))}
                     </tbody>
@@ -120,6 +130,23 @@ const ReviewForm = ({doctors}) => {
                     <div className="form-group">
                         <label htmlFor="review">Review:</label>
                         <textarea className="form-control" id="review" name="review" value={formData.review} onChange={handleChange} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="rating">Rating:</label>
+                        <select
+                            id="rating"
+                            name="rating"
+                            value={formData.rating || ""}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Select rating</option>
+                            {[1,2,3,4,5].map((rating) => (
+                                <option key={rating} value={rating}>
+                                    {rating}
+                                </option>
+                            ))}
+                        </select>
                     </div>
                     {/* Submit button for form submission */}
                     <button className="btn btn-primary" type="submit">Submit</button>

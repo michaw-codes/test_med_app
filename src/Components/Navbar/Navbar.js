@@ -83,8 +83,15 @@ const Navbar = () => {
                 </li>
                 {isLoggedIn?(
                     <>
-                        <li className="link">
-                            Welcome, {username}
+                        <li className="link link-with-profile-card">
+                            <span onClick={handleDropdown}>Welcome, {username}</span>
+                            <div className={`profile-card ${!showDropdown ? 'hidden' : ''}`}>
+                                <ul className="profile-card__list">
+                                    <li className="profile-card__list-item">
+                                        <a href="your-profile">Your Profile</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li className="link">
                         <button className="btn2" onClick={handleLogout}>

@@ -7,6 +7,8 @@ import SignUp from './Components/SignUp/SignUp';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import BookingConsultation from './Components/BookingConsultation';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
+import ProfileCard from './Components/ProfileCard/ProfileCard';
+import ReportsLayout from './Components/ReportsLayout/ReportsLayout';
 
 function App() {
     const [doctors, setDoctors] = useState([]);
@@ -29,6 +31,8 @@ function App() {
                         <Route path="/" element={<LandingPage/>}/>
                         <Route path="/login" element={<Login/>}/>
                         <Route path="/signup" element={<SignUp/>}/>
+                        <Route path="/your-profile" element={<ProfileCard/>}/>
+                        <Route path="/your-reports" element={<ReportsLayout/>}/>
                         <Route path="/instant-consultation" element={<InstantConsultation doctors={doctors} />} />
                         <Route path="/booking-consultation" element={<BookingConsultation doctors={doctors} />} />
                         <Route path="/reviews" element={<ReviewForm doctors={doctors} />} />

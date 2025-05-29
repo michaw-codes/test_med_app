@@ -1,0 +1,45 @@
+.reports {
+    max-width: 900px;
+    margin: 150px auto 0;
+}
+.reports__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.reports__table thead {
+    background-color: #E5E7EB;
+}
+.reports__table tr {
+    border-bottom: 1px solid #6B7280;
+}
+.reports__table td {
+    text-align: center;
+}
+.reports__table .btn {
+    display: inline-block;
+    width: auto;
+    min-width: 150px;
+    margin: 5px;
+}
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 8px;
+}
+.btn-primary {
+    background-color: #3685fb;
+    color: #fff;
+}
+.btn-danger {
+    background-color: #EF4444;
+    color: #fff;
+}
+.btn:disabled {
+    background-color: #6B7280;
+    pointer-events: none;
+    opacity: 0.65;
+}

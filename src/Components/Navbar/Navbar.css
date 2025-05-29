@@ -235,10 +235,10 @@ a.btn1:hover {
 }
 
 .profile-card__list-item a {
-  padding: 0.5rem 0.875rem;
-  color: #111827;
-  font-size: 0.875rem;
-  font-weight: 400;
-  transition: 0.3s;
-  box-sizing: border-box;
+    padding: 0 0 0 0.5rem;
+    color: #111827;
+    font-size: 0.875rem;
+    font-weight: 400;
+    transition: 0.3s;
+    box-sizing: border-box;
 }

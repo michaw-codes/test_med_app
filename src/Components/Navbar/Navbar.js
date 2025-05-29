@@ -90,6 +90,9 @@ const Navbar = () => {
                                     <li className="profile-card__list-item">
                                         <a href="your-profile">Your Profile</a>
                                     </li>
+                                    <li className="profile-card__list-item">
+                                        <a href="your-reports">Your Reports</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>

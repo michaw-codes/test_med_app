@@ -1,0 +1,56 @@
+.reports {
+    max-width: 900px;
+    margin: 150px auto 0;
+}
+
+.reports__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reports__table thead {
+    background-color: #E5E7EB;
+}
+
+.reports__table tr {
+    border-bottom: 1px solid #6B7280;
+}
+
+.reports__table td {
+    text-align: center;
+}
+
+.reports__table .btn {
+    display: inline-block;
+    width: auto;
+    min-width: 150px;
+    margin: 5px;
+}
+
+/* Styles for buttons in the signup form */
+.btn {
+    padding: 10px 20px; /* Set padding for buttons */
+    font-size: 16px; /* Set font size for buttons */
+    border: none; /* Remove button borders */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Styles for primary button in the signup form */
+.btn-primary {
+    background-color: #3685fb; /* Set background color for primary button */
+    color: #fff; /* Set text color for primary button */
+}
+
+.btn-danger {
+    background-color: #EF4444; /* Set background color for primary button */
+    color: #fff; /* Set text color for primary button */
+}
+
+.btn:disabled {
+    background-color: #6B7280;
+    pointer-events: none;
+    opacity: 0.65;
+}

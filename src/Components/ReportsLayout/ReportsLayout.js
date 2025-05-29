@@ -8,14 +8,14 @@ const ReportsLayout = () => {
                 "name": "Dr. John Doe",
                 "speciality": "Cardiology",
             },
-            "path": "reports/medical-report.pdf",
+            "path": "reports/patient_report.pdf",
         },
         {
             "doctor": {
                 "name": "Dr. Anna Strong",
                 "speciality": "General Physician",
             },
-            "path": "reports/medical-report.pdf",
+            "path": "reports/patient_report.pdf",
         },
     ]
 
